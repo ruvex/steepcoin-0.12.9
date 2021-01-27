@@ -1,7 +1,7 @@
-Building Arc Core
+Building Steep Core
 
 After you install the usual build tools and C++ development tools,
-Arc Core also needs some build dependencies which are not always provided
+Steep Core also needs some build dependencies which are not always provided
 by default by the OS package manager
 (in particular BerkeleyDB 4.8 for building with wallet support).
 
@@ -20,8 +20,7 @@ use the autogen script to prepare the build environment.
     ./configure
     make
 
-Precompiled binaries are available at github, see
-https://github.com/AdvancedTechnologyCoin/arc-binaries
+
 
 Always verify the signatures and checksums.
 

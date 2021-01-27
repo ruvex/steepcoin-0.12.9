@@ -5,18 +5,18 @@ define(_CLIENT_VERSION_MINOR, 12)
 define(_CLIENT_VERSION_REVISION, 9)
 define(_CLIENT_VERSION_BUILD, 2)
 define(_CLIENT_VERSION_IS_RELEASE, true)
-define(_COPYRIGHT_YEAR, 2019)
-AC_INIT([Arc Core],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[https://github.com/AdvancedTechnologyCoin/arc_core/issues],[arccore])
+define(_COPYRIGHT_YEAR, 2021)
+AC_INIT([Steep Core],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION])
 AC_CONFIG_SRCDIR([src/validation.cpp])
-AC_CONFIG_HEADERS([src/config/arc-config.h])
+AC_CONFIG_HEADERS([src/config/steep-config.h])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([build-aux/m4])
 
 AC_CANONICAL_HOST
 
-AH_TOP([#ifndef ARC_CONFIG_H])
-AH_TOP([#define ARC_CONFIG_H])
-AH_BOTTOM([#endif //ARC_CONFIG_H])
+AH_TOP([#ifndef STEEP_CONFIG_H])
+AH_TOP([#define STEEP_CONFIG_H])
+AH_BOTTOM([#endif //STEEP_CONFIG_H])
 
 dnl faketime breaks configure and is only needed for make. Disable it here.
 unset FAKETIME
@@ -220,7 +220,7 @@ CPPFLAGS="$CPPFLAGS -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS"
 
 AC_ARG_WITH([utils],
   [AS_HELP_STRING([--with-utils],
-  [build arc-cli arc-tx (default=yes)])],
+  [build steep-cli steep-tx (default=yes)])],
   [build_bitcoin_utils=$withval],
   [build_bitcoin_utils=yes])
 
@@ -232,7 +232,7 @@ AC_ARG_WITH([libs],
 
 AC_ARG_WITH([daemon],
   [AS_HELP_STRING([--with-daemon],
-  [build arcd daemon (default=yes)])],
+  [build steepd daemon (default=yes)])],
   [build_bitcoind=$withval],
   [build_bitcoind=yes])
 
