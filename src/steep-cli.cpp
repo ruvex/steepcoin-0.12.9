@@ -75,12 +75,12 @@ static int AppInitRPC(int argc, char* argv[])
     //
     ParseParameters(argc, argv);
     if (argc<2 || mapArgs.count("-?") || mapArgs.count("-h") || mapArgs.count("-help") || mapArgs.count("-version")) {
-        std::string strUsage = _("Arc Core RPC client version") + " " + FormatFullVersion() + "\n";
+        std::string strUsage = _("Steep Core RPC client version") + " " + FormatFullVersion() + "\n";
         if (!mapArgs.count("-version")) {
             strUsage += "\n" + _("Usage:") + "\n" +
-                  "  arc-cli [options] <command> [params]  " + _("Send command to Arc Core") + "\n" +
-                  "  arc-cli [options] help                " + _("List commands") + "\n" +
-                  "  arc-cli [options] help <command>      " + _("Get help for a command") + "\n";
+                  "  steep-cli [options] <command> [params]  " + _("Send command to Steep Core") + "\n" +
+                  "  steep-cli [options] help                " + _("List commands") + "\n" +
+                  "  steep-cli [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessageCli();
         }
